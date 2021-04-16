@@ -270,6 +270,14 @@ export interface Big {
      */
     toString(): string;
     /**
+     * Returns a primitive number representing the value of this Big number.
+     *
+     * If Big.strict is true an error will be thrown if toNumber is called on a Big number which cannot be converted to a primitive number without a loss of precision.
+     *
+     * @since 6.0
+     */
+    toNumber(): number;
+    /**
      * Returns a string representing the value of this Big number.
      *
      * If this Big number has a positive exponent that is equal to or greater than 21, or a negative exponent equal to or less than -7, then exponential notation is returned.
